@@ -1,6 +1,7 @@
 const { Router } = require('express');
 const DevController = require('./controllers/DevControllers');
 const SeachController = require('./controllers/SearchController');
+const UpdateController = require('./controllers/UpdateController');
 
 const routes = Router();
 
@@ -31,5 +32,6 @@ routes.put('/users', (request, response) => {
 routes.get('/devs', DevController.index);
 routes.put('/devs', DevController.store);
 routes.get('/search', SeachController.index);
+routes.put('/update', UpdateController.update);
 
 module.exports = routes;
